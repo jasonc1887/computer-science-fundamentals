@@ -1,0 +1,211 @@
+Bloc - Intro to Clean Coding 
+
+1. In your own words, explain what clean code is and why it is important.
+
+A: Clean code is the principle behind writing elegant code that adheres to programming fundamentals of DRY, SRP, Method Extraction, Appropriate Nesting and other concepts intended to help programmers implement effective and efficient code now and in the future. 
+
+2. Read this article about Toyota and their use of bad code. Although you may not yet understand all of the topics discussed, think about another commonly used object that relies on computers and explain what would happen if the code was not created to an acceptable standard.
+
+My mother works as a nurse and regularly references the software they utilize day to day, and what difference it has made in eliminating human error in critical circumstances. Though these tools are extremely helpful and effective, errors in code such as that in the case of Toyota could be deadly if an error occurred and the software to read a patient's vitals failed to operate properly. 
+
+3. Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
+
+This code is not clean code for many reasons. The function name is too vague and does not convey the purpose of the function using a verb. Both variables and parameters throughout are also vague and do not use nouns as they should. Lastly, there are too many comments meaning the code is not self-documenting. 
+
+FUNCTION convertScale(temperature, scale) 
+	
+	IF scale = "F" THEN 
+		SET newTemperature to ((temperature - 32) * 5) / 9
+
+	ELSE 
+		SET newTemperature to (temperature * 1.8) + 32
+	
+	END IF
+
+	PRINT newTemperature 
+	
+END FUNCTION
+
+4. I would not consider this example to be clean code, but it is far better than the previous example. My main concern with this example is the abbreviated function name. The function name should be calculatePercent, rather than calcPercent. 
+
+FUNCTION calculatePercent (sum, total)
+
+	IF NOT(total = 0) THEN 
+		SET percentage to sum / total * 100
+
+	ELSE 
+		PRINT "Sorry, cannot divide by 0"
+
+	END IF 
+
+	PRINT percentage
+
+END FUNCTION 
+
+5. 
+
+a)
+FUNCTION getTotal(subTotal, discountRate, tax)
+	
+	SET total to "Your total due is: " + ((subtotal * discountRate) + (subTotal * tax))
+
+	PRINT total
+
+END FUNCTION 
+
+FUNCTION processPayment(paymentType, amountPaid)
+	
+	CALL getTotal RETURNING total
+
+	IF paymentType = 'CASH' THEN 
+		PRINT "Change due: " + (amountPaid - total)
+
+	ELSE 
+		PRINT "Your credit card has been charged: " + total
+
+	END IF
+
+END FUNCTION
+
+b)
+FUNCTION checkoutBook(book, guest)
+	IF guest.accountActive AND NOT(guest.hasOverdueBooks) AND 							   guest.outstandingFees = 0 THEN 
+		
+		APPEND book to guest.books AND SET book.status to "Checked Out"
+
+		PRINT "Your Books have been issued."
+
+	ELSE 
+		
+		PRINT "Unable to checkout book."
+
+	END IF 
+
+END FUNCTION 
+
+c) 
+CLASS BankAccount
+
+ FUNCTION displayBalance
+    
+	PRINT balance
+ 
+ END FUNCTION
+
+END CLASS 
+
+CLASS Transaction
+
+ FUNCTION deposit(amount)
+    
+	SET balance to balance + amount
+ 
+ END FUNCTION
+
+ FUNCTION withdraw(amount)
+     
+	IF balance > amount THEN
+       SET balance to balance - amount
+     
+	END
+	
+ END FUNCTION
+
+END CLASS 
+
+CLASS offers
+
+ FUNCTION creditCardOffer
+     
+	IF NOT(customer.hasCreditCard) THEN
+         CALL offerCreditCard
+     
+	END
+
+ END FUNCTION
+
+ FUNCTION checkStatus
+	
+     IF NOT(customer.hasCheckingAccount) THEN
+         CALL offerCheckingAccount
+
+    END
+
+ END FUNCTION
+
+END CLASS 
+
+6. 
+
+let numbers = [10,1,4,6,1,1,2]
+
+function calculateSum(numbers) {
+	let numbersSum = 0; 
+
+	for (i = 0; i < numbers.length; i++) 
+	numbersSum += numbers[i];
+
+	return numbersSum;
+};
+
+
+function isPerfectSquare() {
+
+	let sum = calculateSum;
+
+	if (sum % Math.sqrt(sum) === 0) {
+	console.log(Math.sqrt(sum));
+
+   }	else {
+	console.log(sum);
+  }
+};
+	
+	
+7.
+
+let numbers = [10,1,4,6,1,1,2]
+
+function checkDuplicates(numbers) {
+	
+	for (i = 0; i < numbers.length; i++){
+	for (j = i + 1; j < numbers.length; j++){
+	
+	if (numbers[i] === numbers[j]) {
+		return true;
+	} else {	
+		return false;
+   }
+  }
+ }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
