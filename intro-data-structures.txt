@@ -1,0 +1,67 @@
+Bloc Computer Science Fundamentals 
+Intro to Data Structures 
+
+1. 
+
+a) 
+
+let people = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+
+b)
+
+people.push("Mary");
+
+c)
+
+function findJosh() {
+  for (i=0; i < people.length; i++) {
+    if (people[i] === "Josh") {
+      console.log(i);
+    }
+  }
+};
+console.log(findJosh());
+
+d)
+
+function findEmily() {
+  for (i=0; i < people.length; i++) {
+    if (people[i] === "Emily") {
+      console.log(i);
+    } else {
+      return "Emily is not in line";
+    }
+  }
+};
+console.log(findEmily());
+
+e) 
+
+people.splice(1, 0, "Melissa");
+
+
+f)
+
+people.splice(3, 1);
+
+2. 
+Provide another real-world example that you can model using a data structure.
+
+A: A music festival lineup and the order bands are scheduled to perform. 
+
+["Misfits", "Bad Brains", "Minor Threat", "NOFX"] etc. 
+
+3. 
+How would your data structure allow developers to access and manipulate the data?
+
+A: Developers could access bands in array by their index and/or name and can manipulate using array methods. 
+
+
+
+
+
+
+
+
+
+
