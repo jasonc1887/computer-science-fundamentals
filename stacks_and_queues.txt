@@ -1,0 +1,120 @@
+Bloc Computer Science Fundamentals 
+Stacks & Queues 
+
+EXERCISES 
+
+1. What is the main difference between a stack and a queue?
+
+A: The main difference between stacks and queues is they use different types of prioritized entries. Stacks use LIFO (last in first out) where as queues use FIFO (first in first out). LIFO means the most recent piece of data added to a stack is also the first to "leave". FIFO implies the opposite - the first piece of data is first to "leave". 
+
+2. What are the similarities between stacks and queues?
+
+Stacks and queues are similar because both are effective ways to store and organize data.
+
+3. Imagine you are an engineer tasked with implementing the UNDO and REDO options in a word processor such as Microsoft Word. Which data structure would you use for each option and why?
+
+A stack data structure would make the most sense in this situation because when using undo/redo, the goal is to access the most recent event or edit to a document and either "undo" or "redo" depending on the goal of the user. Stacks utilize LIFO, so the most recent change is the first accessible item. 
+
+PROGRAMMING QUESTIONS 
+
+1. 
+
+function reverse(string) {
+    let stack = [];
+    for (i = 0; i < string.length; i++) {
+        stack.push(string[i]);
+    }
+    let reverseString = '';
+    while (stack.length > 0) {
+        reverseString += stack.pop();
+    }
+    console.log(reverseString);
+}
+reverse('Bloc!');
+
+2. 
+
+let queue = [];
+
+function pop() {
+  let element = null;
+
+for (i = 0; i < queue.length; i++) {
+    let element = queue.shift[queue.length - 1];
+    return element;
+  }
+}
+
+queue.push(1);
+queue.push(2);
+queue.push(3);
+
+console.log(queue);
+
+queue.pop();
+
+console.log(queue);
+
+3. 
+
+function Queue() {
+  this.elements = [];
+}
+
+Queue.prototype.enqueue = function (e) {
+  this.elements.push(e);
+};
+
+Queue.prototype.dequeue = function () {
+  return this.elements.shift();
+};
+
+var q = new Queue();
+
+function enqueue(element) {
+  q.enqueue(element);
+} 
+
+function dequeue() {
+  while (!q === null) {
+  console.log(q.dequeue());
+ }
+}
+
+enqueue(5);
+console.log(this.elements);
+
+dequeue();
+console.log(this.elements);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
