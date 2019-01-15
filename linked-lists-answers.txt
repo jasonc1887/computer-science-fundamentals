@@ -1,0 +1,116 @@
+Bloc Computer Science Fundamentals 
+Linked Lists
+
+EXERCISES 
+
+1. What are some pros and cons of using linked lists instead of arrays?
+
+A: A pro of linked lists is scalability. Nodes exists independent of one another in linked lists, so they can grow to be very large. A con however, is this independence can make it inefficient to locate an element within the list. Arrays can be indexed, whereas a linked list must be traversed to locate a specific node. 
+
+2. Come up with a real world example of a linked list.
+
+A: A real world example of a linked list could be the history section of a web browser. As a user visits new pages, nodes are created to store website links, which can be traversed via the functionality of the back/forward arrows. 
+
+PROGRAMMING QUESTIONS
+
+1. The line 'SET current to head' does not append the new node being created by the function to the end of the linked list as it should. Instead, this function would try to place new nodes directly after the head node, but we want the function to add new nodes to the end of the linked list. 
+
+*I had help with this answer from my mentor, so I'm pasting the example he used to teach me, along with my comments to demonstrate my understanding as I didn't want to just copy his work with new numbers. Looks messy in plain text but if copy/pasted into real.it, it should be easier to read and code should work fine:  
+
+class Node { //create class called Node 
+  constructor(value) { //adds constructor to class with parameter 'value'
+    this.value = value; //sets this.value on Node to 'value'
+    this.next = null; //sets this.next on Node to 'null'
+  }
+}
+
+class LinkedList { //create Linked List class
+  constructor() { //adds constructor with no parameter
+    this.head = null; //sets this.head to null 
+  }
+
+  push(value) {//creates function called push with parameter 'value', inside Linked List class
+    var newNode = new Node(value); //creates variable called newNode, sets equal to Node class created above
+
+    if (this.head === null) { //if head node is null 
+      this.head = newNode; //newNode becomes head node 
+    } else { //if there is a head node already
+      var currentNode = this.head; //set head node to new variable called currentNode
+
+      while (currentNode.next !== null) { //while the current node points to another node
+        currentNode = currentNode.next; //set currentNode to next node in line and continue until you've reached the end (since it's a while loop)
+      }
+
+      currentNode.next = newNode;//once while loop ends, set currentNode.next (the last node in the line) to the newNode
+    }
+  }
+
+  print() {//creates function called 'print' with no parameter
+    var currentNode = this.head; //creates variable currentNode and sets equal to head node
+
+    while (currentNode !== null) { //while currentNode is not empty...
+      console.log(currentNode.value);//display value of node
+      currentNode = currentNode.next;//continue displating next node until you've reached end. 
+    }
+  }
+}
+
+
+var myLL = new LinkedList();//create variable myLL and set equal to an instance of LinkedList class 
+
+myLL.push(15); //push 15 into Linked List 
+myLL.push(-12); //push -12 into Linked List 
+myLL.push(1234); //push 1234 into Linked List 
+myLL.push(16); //push 16 into Linked List 
+
+myLL.print(); //print entire linked list to console 
+
+2. 
+
+function deleteDuplicates(){
+	if (!this.head) {
+		return undefined
+	} else {
+		let currentNode = this.head;
+		if (currentNode = currentNode.next) {
+			let currentNode.next = null;
+		}
+	}
+}
+
+3. 
+
+function reverseList(list) {
+  if(!list.head || list.length < 2) {
+    return;
+  }
+  let currentNode = list.head; 
+  let nextNode = currentNode.next; 
+  while(nextNode) { 
+    const temp = nextNode.next;
+    nextNode.next = currentNode; 
+    currentNode = nextNode;
+    nextNode = temp;
+  }
+  list.head.next = null;
+  list.head = currentNode;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
