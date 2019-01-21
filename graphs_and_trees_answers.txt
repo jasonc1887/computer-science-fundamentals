@@ -1,0 +1,95 @@
+Bloc Computer Science Fundamentals 
+Trees & Graphs  
+
+EXERCISES 
+
+1.What is a binary tree and what makes it unique to other trees?
+
+A: A tree data structure is a hierarchal data structure consisting of nodes, with a root note at the top. A Binary Tree is unique in that it can have up to two child nodes, a left node and a right node. 
+
+2.What is a heuristic?
+
+A: When an algorithm sacrifices accuracy for greater efficiency in problem solving, it is considered heuristic. 
+
+3.What is another problem besides the shortest-path problem that requires the use of heuristics?
+
+A: Another problem could be tracing the biological evolution of a specific species. If given a set of bones told to determine the animals closest evolutionary descendent from the animal kingdom, it would take forever to record and compare the bones of every animal, so using heuristics, as long as an animal is close to having a similar biological makeup, it could be concluded that they share a common ancenstry.
+
+4.What is the difference between a depth-first search and a breadth-first search?
+
+A: A depth-first search picks a side of a data structure and checks all nodes in order, sticking to a specific path or instruction by an algorithm. For example you should traverse a tree data structure by connecting nodes in search of a specific element and if not found, move left, or move up the tree and check to the left, if a node doesn't exist where you are looking. A breadth-first search searches by rows of nodes from top to bottom and does not care of nodes are linked. 
+
+5.Explain in your own words what an undirected, a-cyclic, unweighted graph is.
+
+A: Nodes do not connect in a single direction, but rather remain ambiguous, a loop can not be formed in this kind of graph and travel between nodes is unweighted so the cost of traveling from one node to another is irrelevant.  
+
+6.What kind of graph is a binary search tree?
+
+A binary search tree is a directed, a-cyclic, unweighted graph. 
+
+PROGRAMMING QUESTIONS
+
+1. Given a Binary Search Tree and a value, write a function that checks to see whether the value exists within the tree.
+
+A: Beginning at the root node of the tree, check if the value of the node matches the value being searched for. If it does, then return the node. If not, move to the left-most node and check again. If not the value being searched, continue traversing left and down comparing node values to the value being searched. If you do not find the node containing this value, move back up the tree until you can move left or down, and repeat the process. Continue this process until you've checked every element in the tree. If the element does not exist, return 'No matching element found'. 
+
+function findElemet(value) {
+  let currentNode = '';
+  
+  while (currentNode != value) {
+    currentNode = currentNode.next
+  } if (currentNode === value) {
+      return currentNode;
+  } else {
+      return 'No matching Element Found'
+  }
+};
+
+2. Given a Binary Search Tree and two nodes, n1 and n2, write a function that finds the distance between the two nodes.
+
+A: To find the distance between two nodes, first find the lowest common ancestor, then determine the distance between each given value and the lowest common ancestor. The sum of these two distances will be the total distance between the two values given. 
+
+function findCommonAncestor(node, n1, n2) {
+  if (!node) return;
+
+  let val = node.value;
+  if (n1 < val && n2 < val) {
+    return findCommonAncestor(node.left, n1, n2);
+  }
+  if (n1 < val && n2 < val) {
+    return findCommonAncestor(node.right, n1, n2);
+  }
+  return node;
+};
+
+
+function findDistance (n1, n2) {
+  let distance = 0;
+
+  if (node === n1) {
+      distance += 0
+  }
+  if (node === n2) {
+      distance += 0
+  }
+  while (node.left != n1 && != n2) {
+    distance += 1
+  }
+  while (node.right != n1 && != n2) {
+    distance += 1
+  }
+  return distance;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
