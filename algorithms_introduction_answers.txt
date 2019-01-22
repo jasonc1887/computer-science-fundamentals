@@ -1,0 +1,61 @@
+Bloc 
+Computer Science Fundamentals 
+Algorithms Introduction 
+
+1. Using proper pseudo-code, describe the following primitive algorithms:
+
+Making coffee;
+	IF coffee is whole bean
+		grind coffee 
+	ELSE 
+		proceed to next step 
+	INSERT filter into coffee maker 
+	ADD one tbsp of ground coffee for every one cup of coffee desired 
+	ADD one cup of water for every tbsp of ground coffee
+	TURN ON coffee maker and allow coffee to brew
+	POUR coffee into cup and enjoy
+END 
+
+Washing dishes;
+	IF dishes are dirty 
+		RINSE each dish 
+		APPLY soap to each dish
+			SCRUB dishes until thoroughly clean
+		RINSE dishes of all soap
+		LET dry
+		PLACE dishes back in cabinet
+	ELSE 
+		RELAX dishes are already done
+END 
+
+Going Snowboarding 
+	WAKE early and check snow report 
+		IF snowfall is less than 3"
+			TURN OFF alarm and go back to bed 
+		ELSE 
+			PACK gear into car 
+			DRIVE to desired ski resort 
+			PARK and head toward shortest lift line
+			ENJOY your day on the mountain
+END 
+
+2. As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+
+Company #1 - Pandora 
+	Pandora uses an algorithm to create custom radio stations specific to a listener's preferences and interests. This provided a unique listening experience that increased the likelihood of listeners discovering music they enjoy. Additionally, the more feedback a user provides the app, the better the stations fits the user's tastes. 
+
+Company #2 - Mervin Manufacturing 
+	Mervin MFG (AKA GNU and Lib Tech) builds snowboards that revolutionized the way boards are built. Their Magne-Traction shape uses "wavy" sidewalls providing more points of contact between the snowboard and the surface of the slope, giving the board more traction and predictability in unpredictable terrain. Prior to this technology, riding packed snow and ice wasn't much fun, but because of this added feature riders can enjoy these conditions with more confidence and overall satisfaction.  
+
+Company #3 - WAZE 	
+	The navigation app WAZE created a more accurate map application by allowing users to provide much of the information other users see. For example collisions can be seen on WAZE sooner than Google Maps because users can push the information to the app quickly and easily for other users to see. 
+
+
+3. Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+An efficient algorithm is one that uses the least steps possible to achieve a desired outcome, while being easy to understand and implement. I'm not positive the last part is required to be considered efficient, but based on previous checkpoints, code that it ultra efficient but impossible for other programmers to understand, likely leads to greater inefficiencies in the long run, even if it accomplished the task at hand just fine. I would imagine long term maintainability should be considered when determining efficient vs inefficient algorithms. 
+
+
+
+
+
