@@ -62,12 +62,6 @@ let HashTable = function() {
       ]; 
     } else {
       let inserted = false;
-      for (let i = 0; i < storage[index].length; i++) {
-        if (storage[index][i][0] === phoneNumber) {
-          storage[index][i][1] = name, address;
-          inserted = true;
-        }
-      }
       if (inserted === false) {
         storage[index].push([phoneNumber, name, address]);
       }
@@ -94,9 +88,9 @@ let ht = new HashTable();
 ht.add('(720)930-8125', 'Jason Chavez', '2863 S Sherman St');
 ht.add('(303)601-6642', 'Briana Sloan', '4254 Maplewood Ave');
 ht.add('(301)775-0470', 'Brandon Davis', '730 Holly Leaf Ln');
-ht.print();
+ht.add('(720)930-8125', 'Not Jason Chavez', '2863 S Sherman St');
 
-console.log(ht.lookup('(720)930-8125'))
+ht.print();
 
 7. Build a system that allows a store owner to track their store's inventory using a hash table for storage.
 
