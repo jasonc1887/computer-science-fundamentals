@@ -1,0 +1,44 @@
+Bloc - Computer Science Fundamentals 
+Time Complexity Basics 
+
+1. What is time complexity and what is its relation to algorithms?
+
+A: Time complexity is a method for estimating the efficiency of an algorithm, determined by its input relative to the time it takes the program to run.  
+
+2. What is runtime?
+
+A: Runtime refers to the physical time duration it takes an algorithm to run, but can also be used synonymously with time complexity. 
+
+3. How is the runtime of an algorithm calculated?
+
+A: Runtime is determined by adding the instructions an algorithm will execute as a function of the size of its input, then simplifying to the largest term and dropping any constants.
+
+4. Name the six types of algorithm growth rates we saw in this checkpoint and list them in order of most efficient to least efficient. Now Google another algorithmic growth rate not covered and place it in the correct spot in your list.
+
+A: Constant, Logarithmic, Linear, Logarithmic-Linear, Quadratic, Cubic, Exponential 
+
+
+5. Choose one of the algorithmic growth rates from the last question and make a comparison to a real-life situation.
+
+A: A band's set time will grow linearly as they add songs to their set list, increasing the time it will take to play through all of the songs. 
+
+6. Linear (n)
+
+7. Quadratic (nˆ2)
+
+8. Constant (1)
+
+9. #8 with a constant growth rate. 
+
+
+
+
+
+
+
+
+
+
+
+
+
