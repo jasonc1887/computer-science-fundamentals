@@ -26,9 +26,9 @@ A: A band's set time will grow linearly as they add songs to their set list, inc
 
 7. Quadratic (nˆ2)
 
-8. Constant (1)
+8. Exponential (2ˆn)
 
-9. #8 with a constant growth rate. 
+9. #6 with a constant linear rate. 
 
 
 
