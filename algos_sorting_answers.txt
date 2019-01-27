@@ -1,0 +1,57 @@
+Bloc - Computer Science Fundamentals	
+Algorithms: Sorting 
+
+1. Write pseudocode for bubble sort.
+
+FUNCTION bubbleSort(collection)
+	REPEAT
+		SET swapped to false 
+
+		FOR i = FIRST INDEX of collection to LAST INDEX of collection -1
+			
+			IF collection[i] > collection[i + 1] THEN 
+				SET temp to collection[i]
+				SET collection[i] to collection[i + 1]
+				SET collection[i + 1] to temp
+				SET swapped to true
+			END IF 
+		END FOR 
+	UNTIL swapped is FALSE 
+
+	RETURN collection
+END FUNCTION 
+
+2. Write pseudocode for quicksort.
+
+FUNCTION quickSort(collection)
+	SET pivotPoint to LAST INDEX of collection
+	SET newCollection to EMPTY
+
+	FOR i = FIRST index of collection to LAST INDEX of collection -1
+		
+		IF collection[i] > pivotPoint THEN 
+			SET collection[i] to pivotPoint[i + 1]
+		ELSE IF collection[i[ < pivotPoint THEN
+			APPEND collection[i] to newCollection
+		ELSE
+			CALL quickSort
+	RETURN newCollection + collection
+END FUNCTION 
+
+3. We talked about time complexity in a previous checkpoint, and how to get an idea of the efficiency of an algorithm. After looking at the pseudocode for the above sorting methods, identify why merge sort and quick sort are much more efficient than the others. Walking through each algorithm with a few sample collections may help.
+
+A: Merge sort and quick sort are most efficient because they make use of "sub-collections" either by breaking collections into smaller pieces, or utilizing pivot points. This allows the algorithm to operate on smaller collections and apply sorting mechanisms to these, whereas other sorting algorithms use multiple iterations to compare entire sets of data. This means other sorting algorithms have to "touch" items in a collection several times to determine their placement in a collection. By dealing with smaller collections then merging those, quick sort and merge sort can handle larger data sets for efficiently. 
+
+
+4. All of the sorts addressed in this checkpoint are known as comparison sorts. Research bucket sort and explain how it works. What is the ideal input for bucket sort?
+
+A: Bucket sort separates elements in a collection into several buckets, then sorts those buckets individually. Once each individual bucket is sorted, the buckets are combined to produce a sorted collection of the original collection. Bucket sort is ideal when the input is uniformly distributed over a range. 
+
+
+
+
+
+
+
+
+
