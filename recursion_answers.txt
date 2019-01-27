@@ -1,0 +1,67 @@
+BLOC - Computer Science Fundamentals 
+Algorithms - Recursion 
+
+1. Define and compare recursion and iteration.
+
+A: Recursion refers to a function that calls itself repeatedly until a defined "base case" is reached, at which time recursion ends. Iteration is the process of "looping" through steps or pieces of data in a function until a specified condition becomes false. Though both work similarly, however recursion can sometimes run slower and is subject to system limitations, whereas iterative solutions can be harder to read and make sense of. So both have pros and cons and should be used when appropriate.  
+
+2. Name five algorithms that are commonly implemented by recursion.
+
+A: Fibonacci, factorial, countdown, binary search, breadth-first and depth-first tree/graph traversal algorithms. 
+
+3. When should you use recursion, and when should you avoid recursion? Give examples for each.
+
+A: In my research I came across this quote which does an excellent job explaining when recursion is appropriate: 
+
+“Loops may achieve a performance gain for your program. Recursion may achieve a performance gain for your programmer. Choose which is more important in your situation!” - Leigh Caldwell
+
+Recursion should be used when it simplifies a program in terms of readability and maintainability by other programmers. 
+
+Because of recursion's use of stacks and the negative potential for instances of stack overflow when dealing with too much information, recursion is not always the best choice for an algorithm. 
+
+4. Compare the recursive and iterative solutions to the three algorithms from the checkpoint (factorial, maximum, and fibonacci). What is similar, and what is different?
+
+A: In the examples provided in the checkpoint, the recursive and iterative examples are similar in that they each have methods for ceasing execution of the function to avoid an infinite loop. They also solve problems by repeating a process multiple times until an end or solution is reached. 
+
+The key difference between the two is that in some cases, iteration is much easier to understand and visualize, such as the maximum numbers function. On the other hand, recursion is ideal for problems like the factorial function because the solution requires handling sub-results repeatedly. Iteration is capable of this, but recursion handles it more gracefully. 
+
+5. Given a multi-dimensional collection (such as an array) where the number of dimensions is unknown, write a recursive algorithm to count the number of items in the entire collection.
+
+function countElements(array){
+  if(!array.length){
+    return 0;
+  } else {
+    return 1 + countElements(array.slice(1))
+  }
+}
+
+console.log(countElements([4,17,3,9,7]));
+
+6. A palindrome is a word or phrase whose spelling is the same either direction (e.g., racecar). Write a recursive algorithm to determine if a given word or phrase is a palindrome.
+
+function isPalindrome(string) {
+
+  if (string.length === 0 || string.length === 1) {
+    return true;
+  }
+  if (string[0] === string[string.length - 1]) {
+    return isPalindrome(string.slice(1, string.length - 1) );
+  }  
+  return false;
+};
+
+console.log(isPalindrome('level'));
+
+7.Google Easter Egg: Google the term "recursion". Google will prompt you with "Did you mean: recursion". Explain why this behavior exhibits properties of recursion.
+
+A: This is hilarious. Recursion is the act of a program "calling" itself to repeat the same function, so placing a link to "recursion" within the search for "recursion" is a visual representation of this concept. 
+
+
+
+
+
+
+
+
+
+
